@@ -1,0 +1,101 @@
+import Apresentacao from "../../components/Apresentacao";
+import Baloes from "../../components/Baloes";
+import BoxContent from "../../components/BoxContent";
+import Button from "../../components/Button";
+import Conteudo from "../../components/Conteudo";
+import Titulo from "../../components/Titulo";
+
+function Home(){
+
+    const biografia = `Olá, meu nome é Thiago Marques e tenho 22 anos. Sou Desenvolvedor WEB e 
+    atualmente curso Engenharia da Computação pela Universidade Federal do Ceará - UFC. Trabalho 
+    com desenvolvimento web já faz dois anos, e antes disso, comecei trabalhando com JAVA entre 2016 e 2018. 
+    Sou bastante proativo e focado, gosto muito de aprender sobre tudo, tenho uma boa gestão do meu tempo.`;
+
+    const universidade = `Na Universidade, faço parte do Centro Acadêmico de Engenharia de Computação 
+    onde realizo vários trabalhos para tentar ajudar os alunos do curso de várias formas, como 
+    trazendo cursos, informçãoes, avisos e notícias através de nossos canais de comunicação.`;
+
+    const trabalhos = `Já desenvolvi vários trabalhos em diferentes linguagens, mas atualmente estou bem 
+    focado com JavaScript e linguagem WEB. Comecei com JAVA onde participei de projetos pessoais e escolares, 
+    e onde aprendi sobre orientação a objetos, desenvolvi com C e C++ durante os primeiros períodos da faculdade 
+    (apesar de ser mais voltado para hardware, também acabei gostando bastante), e atualemente, além das 
+    linguagens e tecnologias de desenvolvimento para Front End (HTML, CSS, JavaScript, JQUERY, Requisições 
+    com AJAX e SASS), estou aprendendo React (onde a prova viva é esse meu portifólio), Tailwind, C# e .NET para 
+    criação de API's.`;
+
+    return (
+        <>
+            <section className="h-screen grid grid-cols-2 px-10">
+                <div className="flex flex-col justify-center items-start">
+                    <Apresentacao />
+                    <article className="mt-8 flex">
+                        <Button key="b1" icone="contato" text="Contato" />
+                        <Button key="b2" icone="download" text="Download CV" />
+                    </article>
+                </div>
+                <div className="flex flex-col items-end justify-center">
+                    <div className="flex flex-row">
+                        <Baloes title="HTML5" text="html" animations="animate-flutuandoA"/>
+                        <Baloes title="CSS3" text="css" animations="animate-flutuandoB"/>
+                        <Baloes title="JavaScript" text="javascript" animations="animate-flutuandoC"/>
+                        <Baloes title="Java" text="java" animations="animate-flutuandoE"/>
+                        <Baloes title="React.JS" text="react" animations="animate-flutuandoD"/>
+                    </div>
+
+                    <div className="flex flex-row">
+                        <Baloes title=".NET" text="dotnet" animations="animate-flutuandoD"/>
+                        <Baloes title="JQUERY" text="jquery" animations="animate-flutuandoF"/>
+                        <Baloes title="Tailwind" text="tailwind" animations="animate-flutuandoG"/>
+                        <Baloes title="C#" text="csharp" animations="animate-flutuandoB"/>
+                    </div>
+                    
+                    <div className="flex flex-row">
+                        <Baloes title="SASS" text="sass" animations="animate-flutuandoH"/>
+                        <Baloes title="MySQL" text="mysql" animations="animate-flutuandoA"/>
+                        <Baloes title="Postgresql" text="postgresql" animations="animate-flutuandoD"/>
+                    </div>
+
+                    <div className="flex flex-row">
+                        <Baloes title="Code" text="cod" animations="animate-flutuandoC"/>
+                        <Baloes title="Git" text="git" animations="animate-flutuandoE"/>
+                    </div>
+                </div>
+            </section>
+
+            <section className="h-screen px-10 flex flex-col justify-center">
+                <Titulo text="Sobre mim" />
+
+                <Conteudo text={biografia}/>
+                <Conteudo text={universidade} />
+                <Conteudo text={trabalhos} />
+
+                <article className="mt-8 flex">
+                    <Button key="b3" icone="linkedin" text="LinkedIn" />
+                    <Button key="b4" icone="github" text="GitHub" />
+                </article>
+            </section>
+
+            <section className="min-h-screen px-10">
+                <Titulo text="Habilidades" />
+                
+                <div className="mt-10 flex flex-row flex-wrap justify-evenly items-center">
+                    <BoxContent text="Desenvolvimento WEB com HTML, CSS e JavaScript" value="3" />
+                    <BoxContent text="Outras tecnolgias para WEB como JQUERY, AJAX, SASS e Tailwind" value="2" />
+                    <BoxContent text="Frameworks para WEB como React.JS e Angular" value="2" />
+                    <BoxContent text="Bancos relacionais e linguagens de consulta SQL com o MySQL e Postgresql" value="1" />
+                    <BoxContent text="Trabalhos com tecnologias JAVA" value="2" />
+                    <BoxContent text="Metodologias Ágeis, testes automatizados (TDD e BDD) e versionamento GIT." value="1" />
+                    <BoxContent text="Criação de APIs com C# e .NET" value="1" />
+                    <BoxContent text="" value="" />
+                </div>
+                
+            </section>
+
+            
+
+        </>
+    )
+}
+
+export default Home;
