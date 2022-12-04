@@ -6,8 +6,20 @@ import Button from "../../components/Button";
 import Conteudo from "../../components/Conteudo";
 import ItemTimeLine from "../../components/ItemTimeLine";
 import Titulo from "../../components/Titulo";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.min.css'; 
+import { useEffect } from "react";
+
 
 function Home(){
+
+    useEffect(() => {
+        mensagemConstrucao();
+    }, []);
+
+    const mensagemConstrucao = () => {
+        toast.warning('Página ainda está em desenvolvimento!');
+    }
 
     const biografia = `Olá, meu nome é Thiago Marques e tenho 22 anos. Sou Desenvolvedor WEB e 
     atualmente curso Engenharia da Computação pela Universidade Federal do Ceará - UFC. Trabalho 
@@ -28,6 +40,8 @@ function Home(){
 
     return (
         <>
+            <ToastContainer />
+            
             <section className="min-h-screen grid grid-cols-2 px-10">
                 <div className="flex flex-col justify-center items-start">
                     <Apresentacao />
@@ -64,7 +78,7 @@ function Home(){
                     </div>
                 </div>
             </section>
-
+            
             <section className="min-h-screen px-10 flex flex-col justify-center">
                 <Titulo text="Sobre mim" />
 
@@ -157,13 +171,10 @@ function Home(){
                     </div>
                 </div>
             </section>
-
-            
-
-            
-
         </>
     )
 }
+
+
 
 export default Home;
