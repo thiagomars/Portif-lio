@@ -1,7 +1,7 @@
 function Titulo(props){
     return(
-        <div className="block mb-5">
-            <h1 className="text-8xl relative font-bold text-white drop-shadow-lg">
+        <div className="flex mb-5">
+            <h1 className="text-8xl font-bold text-white drop-shadow-lg">
                 {props.text}
             </h1>
         </div>

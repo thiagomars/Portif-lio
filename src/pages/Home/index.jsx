@@ -1,8 +1,10 @@
 import Apresentacao from "../../components/Apresentacao";
 import Baloes from "../../components/Baloes";
 import BoxContent from "../../components/BoxContent";
+import BoxVitrine from "../../components/BoxVitrine";
 import Button from "../../components/Button";
 import Conteudo from "../../components/Conteudo";
+import ItemTimeLine from "../../components/ItemTimeLine";
 import Titulo from "../../components/Titulo";
 
 function Home(){
@@ -26,7 +28,7 @@ function Home(){
 
     return (
         <>
-            <section className="h-screen grid grid-cols-2 px-10">
+            <section className="min-h-screen grid grid-cols-2 px-10">
                 <div className="flex flex-col justify-center items-start">
                     <Apresentacao />
                     <article className="mt-8 flex">
@@ -63,7 +65,7 @@ function Home(){
                 </div>
             </section>
 
-            <section className="h-screen px-10 flex flex-col justify-center">
+            <section className="min-h-screen px-10 flex flex-col justify-center">
                 <Titulo text="Sobre mim" />
 
                 <Conteudo text={biografia}/>
@@ -79,7 +81,7 @@ function Home(){
             <section className="min-h-screen px-10">
                 <Titulo text="Habilidades" />
                 
-                <div className="mt-10 flex flex-row flex-wrap justify-evenly items-center">
+                <div className="mt-10 flex flex-row flex-wrap justify-around items-center">
                     <BoxContent text="Desenvolvimento WEB com HTML, CSS e JavaScript" value="3" />
                     <BoxContent text="Outras tecnolgias para WEB como JQUERY, AJAX, SASS e Tailwind" value="2" />
                     <BoxContent text="Frameworks para WEB como React.JS e Angular" value="2" />
@@ -87,10 +89,76 @@ function Home(){
                     <BoxContent text="Trabalhos com tecnologias JAVA" value="2" />
                     <BoxContent text="Metodologias Ágeis, testes automatizados (TDD e BDD) e versionamento GIT." value="1" />
                     <BoxContent text="Criação de APIs com C# e .NET" value="1" />
-                    <BoxContent text="" value="" />
                 </div>
                 
             </section>
+
+            <section className="min-h-screen px-10">
+                <Titulo text="Projetos e Trabalhos" />
+
+                <div className="mt-20 flex flex-wrap items-center justify-center">
+                    <BoxVitrine />
+                    <BoxVitrine />
+                    <BoxVitrine />
+                    <BoxVitrine />
+                    <BoxVitrine />
+                    <BoxVitrine />
+                    <BoxVitrine />
+                </div>
+            </section>
+
+            <section className="min-h-screen px-10">
+                <Titulo text="Formação" />
+
+                <div className="flex items-center h-max mt-12">
+                    <div className="h-60 grid grid-flow-col overflow-y-auto overscroll-x-contain snap-x snap-mandatory">
+                    
+                        <ItemTimeLine 
+                        instituicao="EEEP RITA AGUIAR BARBOSA   " 
+                        local="Itapipoca/CE" 
+                        periodo="2015 até 2017"
+                        ano="2015"
+                        curso="Ensino Técnico em Redes de Computadores"/>
+                        
+                        <ItemTimeLine 
+                        instituicao="UNIVERSIDADE FEDERAL DO CEARÁ - UFC" 
+                        local="Sobral/CE" 
+                        periodo="Cursando desde 2016"
+                        ano="2016"
+                        curso="Bacharelado em Engenharia de Computação"/>
+
+                        <ItemTimeLine 
+                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
+                        local="Sobral/CE" 
+                        periodo="Cursando desde 2019"
+                        ano="2019"
+                        curso="Técnico em Mecânica"/>
+
+                        <ItemTimeLine 
+                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
+                        local="Sobral/CE" 
+                        periodo="Cursando desde 2019"
+                        ano="2019"
+                        curso="Técnico em Mecânica"/>
+
+                        <ItemTimeLine 
+                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
+                        local="Sobral/CE" 
+                        periodo="Cursando desde 2019"
+                        ano="2019"
+                        curso="Técnico em Mecânica"/>
+
+                        <ItemTimeLine 
+                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
+                        local="Sobral/CE" 
+                        periodo="Cursando desde 2019"
+                        ano="2019"
+                        curso="Técnico em Mecânica"/>
+                    </div>
+                </div>
+            </section>
+
+            
 
             
 
