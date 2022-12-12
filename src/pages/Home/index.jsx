@@ -9,6 +9,7 @@ import Titulo from "../../components/Titulo";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css'; 
 import { useEffect } from "react";
+import ListVertical from "../../components/ListVertical";
 
 
 function Home(){
@@ -42,7 +43,7 @@ function Home(){
         <>
             <ToastContainer />
             
-            <section className="min-h-screen lg:bg-slate-800 lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
+            <section className="min-h-screen lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
                 <div className="flex flex-col justify-center items-start lg:min-h-full h-screen">
                     <Apresentacao />
                     <article className="mt-8 flex">
@@ -97,8 +98,8 @@ function Home(){
                 
                 <div className="mt-10 flex flex-row flex-wrap justify-around items-center mb-2">
                     <BoxContent text="Desenvolvimento WEB com HTML, CSS e JavaScript" value="3" />
-                    <BoxContent text="Outras tecnolgias para WEB como JQUERY, AJAX, SASS e Tailwind" value="2" />
-                    <BoxContent text="Frameworks para WEB como React.JS e Angular" value="2" />
+                    <BoxContent text="Outras tecnolgias para WEB como AJAX, SASS e Tailwind" value="2" />
+                    <BoxContent text="Frameworks para WEB como JQUERY, React.JS e Angular" value="2" />
                     <BoxContent text="Bancos relacionais e linguagens de consulta SQL com o MySQL e Postgresql" value="1" />
                     <BoxContent text="Trabalhos com tecnologias JAVA" value="2" />
                     <BoxContent text="Metodologias Ágeis, testes automatizados (TDD e BDD) e versionamento GIT." value="1" />
@@ -147,28 +148,17 @@ function Home(){
                         periodo="Cursando desde 2019"
                         ano="2019"
                         curso="Técnico em Mecânica"/>
-
-                        <ItemTimeLine 
-                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
-                        local="Sobral/CE" 
-                        periodo="Cursando desde 2019"
-                        ano="2019"
-                        curso="Técnico em Mecânica"/>
-
-                        <ItemTimeLine 
-                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
-                        local="Sobral/CE" 
-                        periodo="Cursando desde 2019"
-                        ano="2019"
-                        curso="Técnico em Mecânica"/>
-
-                        <ItemTimeLine 
-                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
-                        local="Sobral/CE" 
-                        periodo="Cursando desde 2019"
-                        ano="2019"
-                        curso="Técnico em Mecânica"/>
                     </div>
+                </div>
+            </section>
+
+            <section className="min-h-screen px-10">
+                <Titulo text="Certificados" />
+
+                <div className="mt-10">
+                    <ListVertical />
+                    <ListVertical />
+                    <ListVertical />
                 </div>
             </section>
         </>
