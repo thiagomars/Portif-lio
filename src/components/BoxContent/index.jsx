@@ -58,7 +58,7 @@ function BoxContent(props){
     }
 
     return(
-        <div className="w-1/5 h-min max-w-fit min-w-min my-4 mx-3 p-3 text-sm bg-white rounded-xl shadow-md">
+        <div className="w-10/12 h-min my-4 mx-2 p-3 text-sm bg-white rounded-xl shadow-md md:w-1/4">
             {props.text}
 
             {progress()}

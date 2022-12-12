@@ -42,15 +42,15 @@ function Home(){
         <>
             <ToastContainer />
             
-            <section className="min-h-screen grid grid-cols-2 px-10">
-                <div className="flex flex-col justify-center items-start">
+            <section className="min-h-screen lg:bg-slate-800 lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
+                <div className="flex flex-col justify-center items-start lg:min-h-full h-screen">
                     <Apresentacao />
                     <article className="mt-8 flex">
                         <Button key="b1" icone="contato" text="Contato" />
                         <Button key="b2" icone="download" text="Download CV" />
                     </article>
                 </div>
-                <div className="flex flex-col items-end justify-center">
+                <div className="flex flex-col lg:items-end justify-center items-center">
                     <div className="flex flex-row">
                         <Baloes title="HTML5" text="html" animations="animate-flutuandoA"/>
                         <Baloes title="CSS3" text="css" animations="animate-flutuandoB"/>
@@ -95,7 +95,7 @@ function Home(){
             <section className="min-h-screen px-10">
                 <Titulo text="Habilidades" />
                 
-                <div className="mt-10 flex flex-row flex-wrap justify-around items-center">
+                <div className="mt-10 flex flex-row flex-wrap justify-around items-center mb-2">
                     <BoxContent text="Desenvolvimento WEB com HTML, CSS e JavaScript" value="3" />
                     <BoxContent text="Outras tecnolgias para WEB como JQUERY, AJAX, SASS e Tailwind" value="2" />
                     <BoxContent text="Frameworks para WEB como React.JS e Angular" value="2" />
@@ -174,7 +174,5 @@ function Home(){
         </>
     )
 }
-
-
 
 export default Home;
