@@ -1,5 +1,6 @@
 import { IoMdContact, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { MdDownloadForOffline } from 'react-icons/md';
+import { HiPlusCircle } from 'react-icons/hi';
 
 const icone = [
     {
@@ -17,6 +18,10 @@ const icone = [
     {
         "tipo": "github",
         "tag": <IoLogoGithub className='w-5 h-5 mr-2'/>
+    },
+    {
+        "tipo": "mais",
+        "tag": <HiPlusCircle className='w-5 h-5 mr-2'/>
     }
 ]
 

@@ -19,7 +19,7 @@ function BoxContent(props){
             return (
                 <div className="my-4 mb-2 w-full h-2 rounded-full bg-gray-200 flex flex-row items-center justify-between">
                     <div className="h-2 w-1/2 rounded-tl-full rounded-bl-full flex flex-row items-center justify-start bg-gray-200">
-                        <div className="rounded-full h-4 w-4 bg-green-500"></div>
+                        <div className="rounded-full h-4 w-4 bg-emerald-500"></div>
                     </div>    
                     <div className="z-20 -mx-2 rounded-full h-4 w-4 bg-gray-200"></div>
                     <div className="h-2 w-1/2 rounded-tr-full rounded-br-full flex flex-row items-center justify-end bg-gray-200">
@@ -31,10 +31,10 @@ function BoxContent(props){
         if(props.value == "2")
             return (
                 <div className="my-4 mb-2 w-full h-2 rounded-full bg-gray-200 flex flex-row items-center justify-between">
-                    <div className="h-2 w-1/2 rounded-tl-full rounded-bl-full flex flex-row items-center justify-start bg-green-500">
-                        <div className="rounded-full h-4 w-4 bg-green-500"></div>
+                    <div className="h-2 w-1/2 rounded-tl-full rounded-bl-full flex flex-row items-center justify-start bg-emerald-500">
+                        <div className="rounded-full h-4 w-4 bg-emerald-500"></div>
                     </div>    
-                    <div className="z-20 -mx-2 rounded-full h-4 w-4 bg-green-500"></div>
+                    <div className="z-20 -mx-2 rounded-full h-4 w-4 bg-emerald-500"></div>
                     <div className="h-2 w-1/2 rounded-tr-full rounded-br-full flex flex-row items-center justify-end bg-gray-200">
                         <div className="rounded-full h-4 w-4 bg-gray-200"></div>
                     </div>    
@@ -44,12 +44,12 @@ function BoxContent(props){
         if(props.value == "3")
             return (
                 <div className="mt-4 mb-2 w-full h-2 rounded-full bg-gray-200 flex flex-row items-center justify-between">
-                    <div className="h-2 w-1/2 rounded-tl-full rounded-bl-full flex flex-row items-center justify-start bg-green-500">
-                        <div className="rounded-full h-4 w-4 bg-green-500"></div>
+                    <div className="h-2 w-1/2 rounded-tl-full rounded-bl-full flex flex-row items-center justify-start bg-emerald-500">
+                        <div className="rounded-full h-4 w-4 bg-emerald-500"></div>
                     </div>    
-                    <div className="z-20 -mx-2 rounded-full h-4 w-4 bg-green-500"></div>
-                    <div className="h-2 w-1/2 rounded-tr-full rounded-br-full flex flex-row items-center justify-end bg-green-500">
-                        <div className="rounded-full h-4 w-4 bg-green-500"></div>
+                    <div className="z-20 -mx-2 rounded-full h-4 w-4 bg-emerald-500"></div>
+                    <div className="h-2 w-1/2 rounded-tr-full rounded-br-full flex flex-row items-center justify-end bg-emerald-500">
+                        <div className="rounded-full h-4 w-4 bg-emerald-500"></div>
                     </div>    
                 </div>
             )
@@ -63,7 +63,7 @@ function BoxContent(props){
 
             {progress()}
             <div className="w-full flex" style={{ justifyContent : (props.value == "1" ? "start" : (props.value == "2" ? "center" : "end")) }}>
-                <div className="text-white bg-green-500 w-min py-1 px-2 rounded-md text-xs font-semibold">
+                <div className="text-white bg-emerald-500 w-min py-1 px-2 rounded-md text-xs font-semibold">
                     {verificNivel()}
                 </div>
             </div>

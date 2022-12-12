@@ -6,38 +6,64 @@ import Button from "../../components/Button";
 import Conteudo from "../../components/Conteudo";
 import ItemTimeLine from "../../components/ItemTimeLine";
 import Titulo from "../../components/Titulo";
-import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.min.css'; 
-import { useEffect } from "react";
 import ListVertical from "../../components/ListVertical";
 
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.min.css'; 
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
 function Home(){
 
-    useEffect(() => {
-        mensagemConstrucao();
-    }, []);
+    const [curso, setCurso] = useState([]);
+    const [formacao, setFormacao] = useState([]);
+    const [sobre, setSobre] = useState([]);
+    const [habilidades, setHabilidades] = useState([]);
+    const [projetosTrabalhos, setProjetosTrabalhos] = useState([]);
+
+    async function lerCurso(){
+        await axios.get('../../dados/curso.json')
+            .then(dados => setCurso(dados.data));
+    }
+
+    async function lerFormacao(){
+        await axios.get('../../dados/formacao.json')
+            .then(dados => setFormacao(dados.data));
+    }
+    
+    async function lerSobre(){
+        await axios.get('../../dados/sobre.json')
+            .then(dados => setSobre(dados.data));
+    }
+
+    async function lerHabilidades(){
+        await axios.get('../../dados/habilidades.json')
+            .then(dados => setHabilidades(dados.data));
+    }
+
+    async function lerProjetosTrabalhos(){
+        await axios.get('../../dados/projetosTrabalhos.json')
+            .then(dados => setProjetosTrabalhos(dados.data));
+    }
 
     const mensagemConstrucao = () => {
         toast.warning('Página ainda está em desenvolvimento!');
     }
 
-    const biografia = `Olá, meu nome é Thiago Marques e tenho 22 anos. Sou Desenvolvedor WEB e 
-    atualmente curso Engenharia da Computação pela Universidade Federal do Ceará - UFC. Trabalho 
-    com desenvolvimento web já faz dois anos, e antes disso, comecei trabalhando com JAVA entre 2016 e 2018. 
-    Sou bastante proativo e focado, gosto muito de aprender sobre tudo, tenho uma boa gestão do meu tempo.`;
+    useEffect(() => {
+        //Dados das sections
+        lerCurso();
+        lerFormacao();
+        lerSobre();
+        lerHabilidades();
+        lerProjetosTrabalhos();
 
-    const universidade = `Na Universidade, faço parte do Centro Acadêmico de Engenharia de Computação 
-    onde realizo vários trabalhos para tentar ajudar os alunos do curso de várias formas, como 
-    trazendo cursos, informçãoes, avisos e notícias através de nossos canais de comunicação.`;
+        mensagemConstrucao(); 
+    }, []);
 
-    const trabalhos = `Já desenvolvi vários trabalhos em diferentes linguagens, mas atualmente estou bem 
-    focado com JavaScript e linguagem WEB. Comecei com JAVA onde participei de projetos pessoais e escolares, 
-    e onde aprendi sobre orientação a objetos, desenvolvi com C e C++ durante os primeiros períodos da faculdade 
-    (apesar de ser mais voltado para hardware, também acabei gostando bastante), e atualemente, além das 
-    linguagens e tecnologias de desenvolvimento para Front End (HTML, CSS, JavaScript, JQUERY, Requisições 
-    com AJAX e SASS), estou aprendendo React (onde a prova viva é esse meu portifólio), Tailwind, C# e .NET para 
-    criação de API's.`;
+    
+
+    
 
     return (
         <>
@@ -83,9 +109,9 @@ function Home(){
             <section className="min-h-screen px-10 flex flex-col justify-center">
                 <Titulo text="Sobre mim" />
 
-                <Conteudo text={biografia}/>
-                <Conteudo text={universidade} />
-                <Conteudo text={trabalhos} />
+                {sobre.map(dado => {
+                    return <Conteudo key={dado.tipo} text={dado.descricao}/>
+                })}
 
                 <article className="mt-8 flex">
                     <Button key="b3" icone="linkedin" text="LinkedIn" />
@@ -97,13 +123,12 @@ function Home(){
                 <Titulo text="Habilidades" />
                 
                 <div className="mt-10 flex flex-row flex-wrap justify-around items-center mb-2">
-                    <BoxContent text="Desenvolvimento WEB com HTML, CSS e JavaScript" value="3" />
-                    <BoxContent text="Outras tecnolgias para WEB como AJAX, SASS e Tailwind" value="2" />
-                    <BoxContent text="Frameworks para WEB como JQUERY, React.JS e Angular" value="2" />
-                    <BoxContent text="Bancos relacionais e linguagens de consulta SQL com o MySQL e Postgresql" value="1" />
-                    <BoxContent text="Trabalhos com tecnologias JAVA" value="2" />
-                    <BoxContent text="Metodologias Ágeis, testes automatizados (TDD e BDD) e versionamento GIT." value="1" />
-                    <BoxContent text="Criação de APIs com C# e .NET" value="1" />
+                    {habilidades.map(dado => {
+                        return <BoxContent 
+                                text={dado.descricao} 
+                                value={dado.xp} 
+                                key={"habilidade" + dado.id}/>
+                    })}
                 </div>
                 
             </section>
@@ -112,42 +137,31 @@ function Home(){
                 <Titulo text="Projetos e Trabalhos" />
 
                 <div className="mt-20 flex flex-wrap items-center justify-center">
-                    <BoxVitrine />
-                    <BoxVitrine />
-                    <BoxVitrine />
-                    <BoxVitrine />
-                    <BoxVitrine />
-                    <BoxVitrine />
-                    <BoxVitrine />
+                    {projetosTrabalhos.map(dado => {
+                        return <BoxVitrine 
+                                key={"projTrab" + dado.id}
+                                titulo={dado.titulo}
+                                descricao={dado.descricao}
+                                imagem={"../../imagens/" + dado.imagem}
+                                link={dado.link}/>
+                    })}
                 </div>
             </section>
 
-            <section className="min-h-screen px-10">
+            <section className="min-h-max px-10">
                 <Titulo text="Formação" />
 
                 <div className="flex items-center h-max mt-12">
                     <div className="h-60 grid grid-flow-col overflow-y-auto overscroll-x-contain snap-x snap-mandatory">
-                    
-                        <ItemTimeLine 
-                        instituicao="EEEP RITA AGUIAR BARBOSA   " 
-                        local="Itapipoca/CE" 
-                        periodo="2015 até 2017"
-                        ano="2015"
-                        curso="Ensino Técnico em Redes de Computadores"/>
-                        
-                        <ItemTimeLine 
-                        instituicao="UNIVERSIDADE FEDERAL DO CEARÁ - UFC" 
-                        local="Sobral/CE" 
-                        periodo="Cursando desde 2016"
-                        ano="2016"
-                        curso="Bacharelado em Engenharia de Computação"/>
-
-                        <ItemTimeLine 
-                        instituicao="INSTITUO FEDERAL DO CEARÁ - IFCE" 
-                        local="Sobral/CE" 
-                        periodo="Cursando desde 2019"
-                        ano="2019"
-                        curso="Técnico em Mecânica"/>
+                        {formacao.map(dado => {
+                            return <ItemTimeLine 
+                                    instituicao={dado.instituicao} 
+                                    local={dado.local}
+                                    periodo={dado.periodo}
+                                    ano={dado.ano}
+                                    curso={dado.curso}
+                                    key={"form" + dado.id} />
+                        })} 
                     </div>
                 </div>
             </section>
@@ -155,11 +169,22 @@ function Home(){
             <section className="min-h-screen px-10">
                 <Titulo text="Certificados" />
 
-                <div className="mt-10">
-                    <ListVertical />
-                    <ListVertical />
-                    <ListVertical />
+                <div className="my-6">
+                    {curso.map((dado) => {
+                        return dado.id < 5 
+                        ? <ListVertical 
+                                key = {"certificado" + dado.id}
+                                nome= {dado.nome}
+                                plataforma = {dado.plataforma}
+                                dataFim = {dado.dataFim} 
+                                href = {dado.link}/>
+                        : null
+                    })}
                 </div>
+
+                <Button key="b5" icone="mais" text="Mostrar mais" />
+
+                
             </section>
         </>
     )
