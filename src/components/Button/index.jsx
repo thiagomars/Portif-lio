@@ -1,6 +1,7 @@
 import { IoMdContact, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 import { MdDownloadForOffline } from 'react-icons/md';
 import { HiPlusCircle } from 'react-icons/hi';
+import { SiWheniwork } from 'react-icons/si'
 
 const icone = [
     {
@@ -22,6 +23,10 @@ const icone = [
     {
         "tipo": "mais",
         "tag": <HiPlusCircle className='w-5 h-5 mr-2'/>
+    },
+    {
+        "tipo": "projetos",
+        "tag": <SiWheniwork className='w-5 h-5 mr-2'/>
     }
 ]
 

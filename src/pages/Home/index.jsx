@@ -146,6 +146,10 @@ function Home(){
                                 link={dado.link}/>
                     })}
                 </div>
+
+                <div className="w-full flex justify-center">
+                    <Button key="b5" icone="projetos" text="Visualizar mais projetos" />
+                </div>
             </section>
 
             <section className="min-h-max px-10">
@@ -182,7 +186,7 @@ function Home(){
                     })}
                 </div>
 
-                <Button key="b5" icone="mais" text="Mostrar mais" />
+                <Button key="b6" icone="mais" text="Mostrar mais" />
 
                 
             </section>
