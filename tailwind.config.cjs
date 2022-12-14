@@ -25,7 +25,8 @@ module.exports = {
             '66%': { transform: 'translateY(14) translateX(0)' },
           },
           zoomBox: {
-            '0%': { transform: 'scale(1) translateY(-10px) translateX(-10px)' },
+            '0%': { transform: 'scale(1)' },
+            '10%': { transform: 'translateY(-10px) translateX(-10px)' },
             '25%': { transform: 'scale(1.2) translateX(20px)' },
             '50%': { transform: 'scale(1.1)  translateY(20px)' },
             '75%': { transform: 'scale(1) translateY(-20px) translateX(-30px)' },

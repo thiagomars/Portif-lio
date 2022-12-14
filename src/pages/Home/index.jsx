@@ -9,9 +9,11 @@ import Titulo from "../../components/Titulo";
 import ListVertical from "../../components/ListVertical";
 
 import { toast, ToastContainer } from "react-toastify";
+import { BsFillArrowDownCircleFill } from 'react-icons/bs'
 import 'react-toastify/dist/ReactToastify.min.css'; 
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import Footer from "../../components/Footer";
 
 function Home(){
 
@@ -37,7 +39,7 @@ function Home(){
     }
 
     async function lerHabilidades(){
-        await axios.get('../../dados/habilidades.json')
+        await axios.get('../dados/habilidades.json')
             .then(dados => setHabilidades(dados.data));
     }
 
@@ -69,8 +71,8 @@ function Home(){
         <>
             <ToastContainer />
             
-            <section className="min-h-screen lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
-                <div className="flex flex-col justify-center items-start lg:min-h-full h-screen">
+            <section className="md:min-h-screen min-h-fit lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
+                <div className="flex flex-col justify-center items-start min-h-screen lg:h-screen">
                     <Apresentacao />
                     <article className="mt-8 flex">
                         <Button key="b1" icone="contato" text="Contato" />
@@ -187,8 +189,10 @@ function Home(){
                 </div>
 
                 <Button key="b6" icone="mais" text="Mostrar mais" />
+            </section>
 
-                
+            <section>
+                <Footer />
             </section>
         </>
     )

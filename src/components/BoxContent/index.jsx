@@ -58,7 +58,7 @@ function BoxContent(props){
     }
 
     return(
-        <div className="w-10/12 h-min my-4 mx-2 p-3 text-sm bg-white rounded-xl shadow-md md:w-1/4">
+        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-10/12 h-min my-4 mx-2 p-3 text-sm bg-white rounded-xl shadow-md md:w-1/4">
             {props.text}
 
             {progress()}
