@@ -112,7 +112,7 @@ function Home(){
                                 key={"projTrab" + dado.id}
                                 titulo={dado.titulo}
                                 descricao={dado.descricao}
-                                imagem={"../../imagens/" + dado.imagem}
+                                imagem={dado.imagem}
                                 link={dado.link}/>
                     })}
                 </div>
