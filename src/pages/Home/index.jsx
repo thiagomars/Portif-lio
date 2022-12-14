@@ -9,11 +9,15 @@ import Titulo from "../../components/Titulo";
 import ListVertical from "../../components/ListVertical";
 
 import { toast, ToastContainer } from "react-toastify";
-import { BsFillArrowDownCircleFill } from 'react-icons/bs'
 import 'react-toastify/dist/ReactToastify.min.css'; 
 import { useState, useEffect } from "react";
-import axios from 'axios';
 import Footer from "../../components/Footer";
+
+import Cursos from "/dados/curso";
+import Formacao from "/dados/formacao";
+import Habilidades from "/dados/habilidades";
+import ProjetosTrabalhos from "/dados/projetosTrabalhos";
+import Sobre from "/dados/sobre";
 
 function Home(){
 
@@ -23,49 +27,13 @@ function Home(){
     const [habilidades, setHabilidades] = useState([]);
     const [projetosTrabalhos, setProjetosTrabalhos] = useState([]);
 
-    async function lerCurso(){
-        await axios.get('../../dados/curso.json')
-            .then(dados => setCurso(dados.data));
-    }
-
-    async function lerFormacao(){
-        await axios.get('../../dados/formacao.json')
-            .then(dados => setFormacao(dados.data));
-    }
-    
-    async function lerSobre(){
-        await axios.get('../../dados/sobre.json')
-            .then(dados => setSobre(dados.data));
-    }
-
-    async function lerHabilidades(){
-        await axios.get('../dados/habilidades.json')
-            .then(dados => setHabilidades(dados.data));
-    }
-
-    async function lerProjetosTrabalhos(){
-        await axios.get('../../dados/projetosTrabalhos.json')
-            .then(dados => setProjetosTrabalhos(dados.data));
-    }
-
     const mensagemConstrucao = () => {
         toast.warning('Página ainda está em desenvolvimento!');
     }
 
     useEffect(() => {
-        //Dados das sections
-        lerCurso();
-        lerFormacao();
-        lerSobre();
-        lerHabilidades();
-        lerProjetosTrabalhos();
-
         mensagemConstrucao(); 
     }, []);
-
-    
-
-    
 
     return (
         <>
@@ -111,7 +79,7 @@ function Home(){
             <section className="min-h-screen px-10 flex flex-col justify-center">
                 <Titulo text="Sobre mim" />
 
-                {sobre.map(dado => {
+                {Sobre().map(dado => {
                     return <Conteudo key={dado.tipo} text={dado.descricao}/>
                 })}
 
@@ -125,7 +93,7 @@ function Home(){
                 <Titulo text="Habilidades" />
                 
                 <div className="mt-10 flex flex-row flex-wrap justify-around items-center mb-2">
-                    {habilidades.map(dado => {
+                    {Habilidades().map(dado => {
                         return <BoxContent 
                                 text={dado.descricao} 
                                 value={dado.xp} 
@@ -139,7 +107,7 @@ function Home(){
                 <Titulo text="Projetos e Trabalhos" />
 
                 <div className="mt-20 flex flex-wrap items-center justify-center">
-                    {projetosTrabalhos.map(dado => {
+                    {ProjetosTrabalhos().map(dado => {
                         return <BoxVitrine 
                                 key={"projTrab" + dado.id}
                                 titulo={dado.titulo}
@@ -159,7 +127,7 @@ function Home(){
 
                 <div className="flex items-center h-max mt-12">
                     <div className="h-60 grid grid-flow-col overflow-y-auto overscroll-x-contain snap-x snap-mandatory">
-                        {formacao.map(dado => {
+                        {Formacao().map(dado => {
                             return <ItemTimeLine 
                                     instituicao={dado.instituicao} 
                                     local={dado.local}
@@ -176,7 +144,7 @@ function Home(){
                 <Titulo text="Certificados" />
 
                 <div className="my-6">
-                    {curso.map((dado) => {
+                    {Cursos().map((dado) => {
                         return dado.id < 5 
                         ? <ListVertical 
                                 key = {"certificado" + dado.id}
