@@ -26,10 +26,20 @@ function Footer(){
                 </div>
                 <div className='flex flex-col justify-center items-center my-5'>
                     <h2 className='text-sm tracking-[.22em]'>ENVIE UM EMAIL PARA</h2>
-                    <p className='rounded-md cursor-pointer text-xl font-semibold mt-2 mb-8'>r15.thiagomarques@gmail.com</p>
-                    <IoLogoLinkedin className='w-10 h-10 drop-shadow-lg cursor-pointer my-2'/>
-                    <IoLogoGithub className='w-10 h-10 drop-shadow-lg cursor-pointer my-2'/>
-                    <RiCodeBoxFill className='w-10 h-10 drop-shadow-lg cursor-pointer my-2'/>
+                    
+                    <a href="mailto:r15.thiagomarques@gmail.com?subject=Hello%20again" className='rounded-md cursor-pointer text-xl font-semibold mt-2 mb-8'>r15.thiagomarques@gmail.com</a>
+                    
+                    <a href="https://www.linkedin.com/in/thiago-marques-sousa-b22627152/">
+                        <IoLogoLinkedin className='w-10 h-10 drop-shadow-lg cursor-pointer my-2 hover:scale-110 duration-300 ease-in-out delay-100'/>
+                    </a>
+
+                    <a href="https://github.com/thiagomars">
+                        <IoLogoGithub className='w-10 h-10 drop-shadow-lg cursor-pointer my-2 hover:scale-110 duration-300 ease-in-out delay-100'/>
+                    </a>
+
+                    <a href="https://github.com/thiagomars/Portif-lio">
+                        <RiCodeBoxFill className='w-10 h-10 drop-shadow-lg cursor-pointer my-2 hover:scale-110 duration-300 ease-in-out delay-100'/>
+                    </a>
                 </div>
             </div>
 

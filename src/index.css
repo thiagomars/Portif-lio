@@ -8,5 +8,6 @@
     html {
       color: #646464;
       font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
     }
   }

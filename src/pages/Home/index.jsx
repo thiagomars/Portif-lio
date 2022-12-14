@@ -43,8 +43,8 @@ function Home(){
                 <div className="flex flex-col justify-center items-start min-h-screen lg:h-screen">
                     <Apresentacao />
                     <article className="mt-8 flex">
-                        <Button key="b1" icone="contato" text="Contato" />
-                        <Button key="b2" icone="download" text="Download CV" />
+                        <Button url="#contato" key="b1" icone="contato" text="Contato" />
+                        <Button url="https://drive.google.com/file/d/1iQ_B0x6knOdvNm9iT_A-08ou8ANDKyEs/view?usp=share_link" key="b2" icone="download" text="Download CV" />
                     </article>
                 </div>
                 <div className="flex flex-col lg:items-end justify-center items-center">
@@ -76,7 +76,7 @@ function Home(){
                 </div>
             </section>
             
-            <section className="min-h-screen px-10 flex flex-col justify-center">
+            <section id="sobre" className="min-h-screen px-10 flex flex-col justify-center">
                 <Titulo text="Sobre mim" />
 
                 {Sobre().map(dado => {
@@ -84,12 +84,12 @@ function Home(){
                 })}
 
                 <article className="mt-8 flex">
-                    <Button key="b3" icone="linkedin" text="LinkedIn" />
-                    <Button key="b4" icone="github" text="GitHub" />
+                    <Button url="https://www.linkedin.com/in/thiago-marques-sousa-b22627152/" key="b3" icone="linkedin" text="LinkedIn" />
+                    <Button url="https://github.com/thiagomars" key="b4" icone="github" text="GitHub" />
                 </article>
             </section>
 
-            <section className="min-h-screen px-10">
+            <section id="habilidades" className="min-h-screen px-10">
                 <Titulo text="Habilidades" />
                 
                 <div className="mt-10 flex flex-row flex-wrap justify-around items-center mb-2">
@@ -103,7 +103,7 @@ function Home(){
                 
             </section>
 
-            <section className="min-h-screen px-10">
+            <section id="projetos" className="min-h-screen px-10">
                 <Titulo text="Projetos e Trabalhos" />
 
                 <div className="mt-20 flex flex-wrap items-center justify-center">
@@ -118,11 +118,11 @@ function Home(){
                 </div>
 
                 <div className="w-full flex justify-center">
-                    <Button key="b5" icone="projetos" text="Visualizar mais projetos" />
+                    <Button url="https://github.com/thiagomars" key="b5" icone="projetos" text="Visualizar mais projetos" />
                 </div>
             </section>
 
-            <section className="min-h-max px-10">
+            <section id="formacao" className="min-h-max px-10">
                 <Titulo text="Formação" />
 
                 <div className="flex items-center h-max mt-12">
@@ -140,7 +140,7 @@ function Home(){
                 </div>
             </section>
 
-            <section className="min-h-screen px-10">
+            <section id="certificados" className="min-h-screen px-10">
                 <Titulo text="Certificados" />
 
                 <div className="my-6">
@@ -159,7 +159,7 @@ function Home(){
                 <Button key="b6" icone="mais" text="Mostrar mais" />
             </section>
 
-            <section>
+            <section id="contato">
                 <Footer />
             </section>
         </>
