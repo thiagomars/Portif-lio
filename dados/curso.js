@@ -10,7 +10,16 @@ function Cursos(){
                 "link": "https://www.udemy.com/certificate/UC-557e61c0-5ae2-47d4-a105-cdbb6073f5dc/"
             },
             {
-                "id": 2,
+                "id": 3,
+                "nome": "Bootcamp Pottencial .NET Developer",
+                "plataforma": "DIO.me",
+                "descricao": "Uma trilha completa em .NET, Banco de Dados SQL e projetos práticos que te preparam para atuar em grandes cases de mercado.",
+                "dataInicio": "23/11/2022",
+                "dataFim": "18/01/2023",
+                "link": "https://www.dio.me/certificate/9C336BD8/share"
+            },
+            {
+                "id": 4,
                 "nome": "Testes Automatizados (TDD + BDD)",
                 "plataforma": "DELL Lead",
                 "descricao": "Conceitos de testes de software Parte 1 e Parte 2; Teste Driven Development (Teoria e Prática); Behavior Driven Development (Teoria e Prática); Estudo de mercado;",
@@ -19,7 +28,7 @@ function Cursos(){
                 "link": ""
             },
             {
-                "id": 3,
+                "id": 5,
                 "nome": "Introdução ao Git e ao GitHub",
                 "plataforma": "DIO",
                 "descricao": "",
@@ -28,7 +37,7 @@ function Cursos(){
                 "link": "https://www.dio.me/certificate/7CB7A9A2/share"
             },
             {
-                "id": 4,
+                "id": 6,
                 "nome": "Introdução ao Desenvolvimento Moderno de Software",
                 "plataforma": "DIO",
                 "descricao": "Carga horária de 1 hora.",
@@ -37,7 +46,7 @@ function Cursos(){
                 "link": "https://www.dio.me/certificate/73DE1AB0/share"
             },
             {
-                "id": 5,
+                "id": 7,
                 "nome": "Principais Protocolos de Comunicação da Internet",
                 "plataforma": "DIO",
                 "descricao": "Carga horária de 3 horas.",
@@ -46,7 +55,7 @@ function Cursos(){
                 "link": "https://www.dio.me/certificate/FF9B066C/share"
             },
             {
-                "id": 6,
+                "id": 8,
                 "nome": "Introdução ao Mercado de Qualidade de Software",
                 "plataforma": "DIO",
                 "descricao": "Carga horária de 2 horas.",
@@ -55,7 +64,7 @@ function Cursos(){
                 "link": "https://www.dio.me/certificate/A69C0DEF/share"
             },
             {
-                "id": 7,
+                "id": 9,
                 "nome": "Conceitos e Melhores Práticas com Bancos de Dados PostgreSQL",
                 "plataforma": "DIO",
                 "descricao": "Carga horária de 9 horas.",
