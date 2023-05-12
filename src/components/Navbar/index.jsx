@@ -2,16 +2,13 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { CgMenuRightAlt } from 'react-icons/cg'
 
-import { BsFillPersonLinesFill, BsTools } from 'react-icons/bs';
+import { BsHouseDoorFill, BsTools } from 'react-icons/bs';
 import { RiSuitcaseFill, RiMessageFill } from 'react-icons/ri';
 import { IoMdSchool, IoMdDocument } from 'react-icons/io';
 
 function Navbar() {
     return (
-        <header className="fixed w-screen flex justify-between px-10 py-4 z-50">
-            <div>
-                <p className="font-bold text-lg">&lt;o.o&gt;</p>
-            </div>
+        <header className="fixed w-full flex justify-end px-8 py-8 z-50">
             <div>
                 <Menu as="div" className="relative inline-block text-left">
                     <div>
@@ -32,19 +29,19 @@ function Navbar() {
                             <div className="px-1 py-1">
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#sobre"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`}>
+                                        <a href="/"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`}>
                                             {active 
-                                            ? ( <BsFillPersonLinesFill className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
-                                            : ( <BsFillPersonLinesFill className="mr-2 h-5 w-5" aria-hidden="true" />
+                                            ? ( <BsHouseDoorFill className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
+                                            : ( <BsHouseDoorFill className="mr-2 h-5 w-5" aria-hidden="true" />
                                             )}
-                                            Sobre mim
+                                            Inicio
                                         </button></a>
                                     )}
                                 </Menu.Item>
                                 
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#habilidades"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
+                                        <a href="/Habilidades"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
                                             {active 
                                             ? ( <BsTools className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
                                             : ( <BsTools className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -56,7 +53,7 @@ function Navbar() {
 
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#projetos"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
+                                        <a href="/Projetos"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
                                             {active 
                                             ? ( <RiSuitcaseFill className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
                                             : ( <RiSuitcaseFill className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -68,7 +65,7 @@ function Navbar() {
 
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#formacao"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
+                                        <a href="/Formacao"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
                                             {active 
                                             ? ( <IoMdSchool className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
                                             : ( <IoMdSchool className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -80,7 +77,7 @@ function Navbar() {
 
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#certificados"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
+                                        <a href="/Certificados"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
                                             {active 
                                             ? ( <IoMdDocument className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
                                             : ( <IoMdDocument className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -92,7 +89,7 @@ function Navbar() {
 
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <a href="#contato"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
+                                        <a href="/Contato"><button  className={`${active ? 'bg-emerald-500 text-white' : 'text-gray-700' } group flex w-full items-center rounded-md px-2 py-2 text-sm`} >
                                             {active 
                                             ? ( <RiMessageFill className="mr-2 h-5 w-5" aria-hidden="true" /> ) 
                                             : ( <RiMessageFill className="mr-2 h-5 w-5" aria-hidden="true" />

@@ -12,21 +12,21 @@ function ProjetosTrabalhos(){
                 "titulo": "Landing Pag",
                 "descricao": "Uma página simples criada utilizando puramente HTML, CSS e um pouco de JavaScript.",
                 "imagem": "https://i.imgur.com/eUWDN21.png",
-                "link": "https://github.com/thiagomars/landing_page"
+                "link": "https://landing-page-rho-olive.vercel.app"
             },
             {
                 "id": 3,
                 "titulo": "Netflix - Clone",
                 "descricao": "Um clone do FrontEnd da página da Netflix com um carrosel básico e uma interface bonita.",
                 "imagem": "https://i.imgur.com/4K0bXit.png",
-                "link": "https://github.com/thiagomars/CRUD-com-React"
+                "link": "https://clone-netflix-amber-one.vercel.app"
             },
             {
                 "id": 4,
                 "titulo": "Sistema de Lava Jato",
                 "descricao": "Interface de um sistema online de registro de entrada e saída de um lava jato para carros e motos, com cadastros disponíveis.",
                 "imagem": "https://i.imgur.com/sq6CHX9.png",
-                "link": "https://github.com/thiagomars/Sistema-LavaJato"
+                "link": "https://sistema-lava-jato.vercel.app"
             },
             {
                 "id": 5,

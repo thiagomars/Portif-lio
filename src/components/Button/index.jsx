@@ -32,9 +32,13 @@ const icone = [
 
 function Button(props){
     return(
-        <a href={props.url} key={props.key} className="flex w-min flex-row whitespace-nowrap text-sm font-semibold shadow-md hover:bg-white/60 hover:shadow-xl duration-200 px-3 py-2 mr-5 mb-5 rounded-lg border-gray-500 ring-gray-500 ring-2 bg-white/10 backdrop-blur-3xl backdrop-opacity-80">
-            {icone.map( (tag) => tag.tipo == props.icone ? tag.tag : null)}
-            {props.text}
+        <a target="_blank"
+            href={props.url} 
+            
+            className="flex w-min flex-row whitespace-nowrap text-sm font-semibold shadow-md hover:bg-white/60 hover:shadow-xl duration-200 px-3 py-2 mr-5 mb-5 rounded-lg border-gray-500 ring-gray-500 ring-2 bg-white/10 backdrop-blur-3xl backdrop-opacity-80">
+                {icone.map( tag => tag.tipo == props.icone ? tag.tag : null)}
+                {props.icones}
+                {props.text}
         </a>
     )
 }

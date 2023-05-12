@@ -4,7 +4,7 @@ import Tags from '../Tags';
 
 function Footer(){
     return(
-        <footer className='pt-10 mt-10 bg-white/50'>
+        <footer className='pt-10 z-50 bg-white/50'>
             <div className='min-h-[calc(100vh-5rem)] grid grid-cols-1 md:grid-cols-2'>
                 <div className='flex flex-col justify-center items-center'>
                     <img src="https://i.imgur.com/0rDPfTM.png" alt="" className='border-4 rounded-full border-gray-500 w-1/3'></img>

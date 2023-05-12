@@ -41,7 +41,7 @@ function Baloes(props){
 
     return(
         
-        <div className={props.animations + " m-3 p-3 rounded-full bg-white drop-shadow-xl"} title={props.title}>
+        <div className={props.animations + " p-3 rounded-full bg-white drop-shadow-xl"} title={props.title}>
             {icone()}
         </div>
 

@@ -2,7 +2,7 @@ import { RiMedalFill } from 'react-icons/ri';
 
 function ListVertical(props){
     return(
-        <div className="flex flex-row -mt-3" key={props.key}>
+        <div className="flex flex-row -mt-3" key={props.key} onClick={() => props.onClick}>
             <div className="w-2 rounded-full bg-white shadow-md flex items-center justify-center mr-6">
                 <div className="bg-emerald-500 p-1 rounded-full text-white shadow-md"> <RiMedalFill className='w-5 h-5' /> </div>
             </div>

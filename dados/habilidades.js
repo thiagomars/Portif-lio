@@ -28,11 +28,16 @@ function Habilidades(){
             {
                 "id": 6,
                 "descricao": "Metodologias Ágeis, testes automatizados (TDD e BDD) e versionamento GIT.",
-                "xp": 1
+                "xp": 2
             },
             {
                 "id": 7,
                 "descricao": "Criação de APIs com C# e .NET",
+                "xp": 2
+            },
+            {
+                "id": 8,
+                "descricao": "Criação de APIs Java",
                 "xp": 1
             }
         ];
