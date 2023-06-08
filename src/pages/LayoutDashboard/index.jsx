@@ -14,10 +14,10 @@ import 'react-toastify/dist/ReactToastify.min.css';
 export default function LayoutDashboard() {
     return (
         <div>
-            <ToastContainer />
             <Fundo />
-            <div className="flex flex-col md:flex-row">
-                <div className="flex flex-col w-screen">
+            <div className="w-full flex flex-col md:flex-row">
+                <div className="flex flex-col">
+                    <ToastContainer />
                     <Navbar />
                     <Outlet />
                 </div>

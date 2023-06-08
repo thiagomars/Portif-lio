@@ -53,12 +53,8 @@ function Home() {
 
     }
 
-    function redirecionarTeste(){
-        navigate("/Certificados", {state: {id: 2, nome: nome, sobreNome: sobreNome}})
-    }
-
     return (
-        <>
+        <div>
             <div className="flex flex-col md:flex-row">
 
                 <div className="h-screen w-fit hidden lg:flex lg:sticky lg:top-0">
@@ -73,7 +69,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-col w-screen">
+                <div className="flex flex-col w-full">
                     <section id="home" className="md:min-h-screen min-h-fit lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
                         <div className="flex flex-col justify-center items-start min-h-screen ">
                             <Apresentacao />
@@ -203,13 +199,7 @@ function Home() {
             <section id="contato">
                 <Footer />
             </section>
-
-            <form method="post" className="form">
-                <input type="text" className="signup-input" value={nome} onChange={(e) => setNome(e.target.value)} />
-                <input type="text" className="signup-input" value={sobreNome} onChange={(e) => setSobreNome(e.target.value)}/>
-                <button className="btn btn-primary" onClick={() => redirecionarTeste()}>Submit</button>
-            </form>
-        </>
+        </div>
     )
 }
 

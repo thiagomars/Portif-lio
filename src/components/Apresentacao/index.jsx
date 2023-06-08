@@ -1,6 +1,8 @@
-function Apresentacao(){
+import { useEffect } from "react";
+
+export default function Apresentacao(){
     return(
-        <div className="text-center lg:text-start md:w-full">
+        <div className="text-center lg:text-start md:w-full" >
             <h2 className="text-3xl">Olá, meu nome é</h2>
             <h1 className="text-6xl font-bold mt-1">Thiago Marques</h1>
             <div className="flex flex-col lg:flex-row mt-2 lg:items-end">
@@ -10,5 +12,3 @@ function Apresentacao(){
         </div>
     )
 }
- 
-export default Apresentacao; 
