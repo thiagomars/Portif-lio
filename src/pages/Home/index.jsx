@@ -1,4 +1,3 @@
-import Apresentacao from "../../components/Apresentacao";
 import Baloes from "../../components/Baloes";
 import BoxContent from "../../components/BoxContent";
 import BoxVitrine from "../../components/BoxVitrine";
@@ -72,7 +71,14 @@ function Home() {
                 <div className="flex flex-col w-full">
                     <section id="home" className="md:min-h-screen min-h-fit lg:grid lg:grid-cols-2 px-10 md:grid-cols-1">
                         <div className="flex flex-col justify-center items-start min-h-screen ">
-                            <Apresentacao />
+                            <div className="text-center lg:text-start md:w-full" >
+                                <h2 className="text-3xl">Olá, meu nome é</h2>
+                                <h1 className="text-6xl font-bold mt-1">Thiago Marques</h1>
+                                <div className="flex flex-col lg:flex-row mt-2 lg:items-end">
+                                    <h2 className="text-2xl lg:text-end">e sou</h2>
+                                    <h1 className="text-3xl font-bold ml-2 h-full">Desenvolvedor <span className="text-5xl">Full Stack.</span></h1>
+                                </div>
+                            </div>
                             <article className="mt-8 flex justify-center w-full lg:w-fit lg:justify-start">
                                 <Button url="/Contato" key="b1" icone="contato" text="Contato" />
                                 <Button url="https://drive.google.com/file/d/1iQ_B0x6knOdvNm9iT_A-08ou8ANDKyEs/view?usp=share_link" key="b2" icone="download" text="Download CV" />
