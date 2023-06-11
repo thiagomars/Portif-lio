@@ -1,6 +1,5 @@
 import { TbFaceIdError } from "react-icons/tb"
 
-
 export default function ErrorPage() {
     return (
         <div className="w-full h-screen bg-gradient-to-r from-cyan-400 to-cyan-500 flex flex-col justify-center items-center text-center p-5">

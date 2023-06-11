@@ -5,11 +5,11 @@ import { Route, useLocation } from "react-router-dom";
 
 export default function Certificados(props) {
 
-    const {state} = useLocation();
-    const { id, nome, sobreNome } = state;
+    // const {state} = useLocation();
+    // const { id, nome, sobreNome } = state;
 
-    console.log(nome);
-    console.log(sobreNome);
+    // console.log(nome);
+    // console.log(sobreNome);
 
     return (
         <div className="px-10 py-16">
@@ -17,9 +17,9 @@ export default function Certificados(props) {
 
             <div className="my-6">
                 {Cursos().map((dado) => {
-                    return dado.id < 100
+                    return dado.id < 100 && !!dado
                         ? <ListVertical
-                            key={"certificado" + dado.id}
+                            key={("certificados" + dado.id).replace(" ", "_")}
                             nome={dado.nome}
                             plataforma={dado.plataforma}
                             dataFim={dado.dataFim} 

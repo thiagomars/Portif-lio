@@ -8,7 +8,7 @@ import { IoMdSchool, IoMdDocument } from 'react-icons/io';
 
 function Navbar() {
     return (
-        <header className="fixed w-full flex justify-end px-8 py-8 z-50">
+        <header className="fixed w-min right-0 flex justify-end px-8 py-8 z-50">
             <div>
                 <Menu as="div" className="relative inline-block text-left">
                     <div>
