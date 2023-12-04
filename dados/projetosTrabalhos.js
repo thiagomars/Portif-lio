@@ -37,11 +37,12 @@ function ProjetosTrabalhos(){
             },
             {
                 "id": 6,
-                "titulo": "Criar Times com Card's dinamicamente",
-                "descricao": "Uma página para criar times com cards e grupos, podendo cadastrar ou deletar utilizando React.JS.",
-                "imagem": "https://i.imgur.com/7MI7Otb.png",
-                "link": "https://github.com/thiagomars/PAG-TIMES-REACT"
-            }
+                "titulo": "Sistema de Estacionamento",
+                "descricao": "Um sistema completo de estacionamento utilizando React e .NET",
+                "imagem": "https://i.imgur.com/l9DvLCU.jpeg",
+                "link": "https://github.com/thiagomars/Sistema-Estacionamento"
+            },
+            
         ];
     return lista;
 }
